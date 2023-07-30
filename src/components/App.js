@@ -3,24 +3,24 @@ import React from "react"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-// import { AuthProvider } from "../contexts/AuthContext"
+import { AuthProvider } from "../contexts/AuthContext"
 
-// import Chats from "./Chats"
+import Chats from "./Chats"
 import Login from "./Login.jsx"
 
 function App() {
   return (
     <div style={{ fontFamily: 'Avenir' }}>
       <Router>
-        {/* <AuthProvider> */}
+        <AuthProvider>
           <Routes>
-            {/* <Route path="/chats" element={<Chats/>} /> */}
+            <Route path="/chats" element={<Chats/>} />
              <Route path="/" element={<Login/>} />
           </Routes>
-        {/* </AuthProvider> */}
+        </AuthProvider>
       </Router>
     </div>
   )
 }
 
-export default App 
+export default App
